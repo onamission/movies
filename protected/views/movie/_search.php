@@ -1,0 +1,60 @@
+<?php
+/* @var $this MovieController */
+/* @var $model Movie */
+/* @var $form CActiveForm */
+?>
+
+<div class="wide form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'action'=>Yii::app()->createUrl($this->route),
+	'method'=>'get',
+)); ?>
+
+	<div class="row">
+		<?php echo $form->label($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'Title'); ?>
+		<?php echo $form->textField($model,'Title',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'year_released'); ?>
+		<?php echo $form->textField($model,'year_released',array('size'=>4,'maxlength'=>4)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'created_by'); ?>
+		<?php echo $form->textField($model,'created_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'created_date'); ?>
+		<?php echo $form->textField($model,'created_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'updated_by'); ?>
+		<?php echo $form->textField($model,'updated_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'updated_date'); ?>
+		<?php echo $form->textField($model,'updated_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'synopsis'); ?>
+		<?php echo $form->textArea($model,'synopsis',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Search'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- search-form -->
